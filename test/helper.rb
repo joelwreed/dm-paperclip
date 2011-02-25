@@ -30,9 +30,9 @@ Merb.class_eval do
 end
 
 $LOAD_PATH << File.join(ROOT, 'lib')
-$LOAD_PATH << File.join(ROOT, 'lib', 'dm-paperclip')
+$LOAD_PATH << File.join(ROOT, 'lib', 'dm-paperclip-r3')
 
-require File.join(ROOT, 'lib', 'dm-paperclip.rb')
+require File.join(ROOT, 'lib', 'dm-paperclip-r3.rb')
 
 ENV['RAILS_ENV'] ||= 'test'
 

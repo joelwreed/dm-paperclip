@@ -31,14 +31,14 @@ require 'tempfile'
 require 'extlib'
 require 'dm-core'
 
-require 'dm-paperclip/upfile'
-require 'dm-paperclip/iostream'
-require 'dm-paperclip/geometry'
-require 'dm-paperclip/processor'
-require 'dm-paperclip/thumbnail'
-require 'dm-paperclip/storage'
-require 'dm-paperclip/interpolations'
-require 'dm-paperclip/attachment'
+require 'dm-paperclip-r3/upfile'
+require 'dm-paperclip-r3/iostream'
+require 'dm-paperclip-r3/geometry'
+require 'dm-paperclip-r3/processor'
+require 'dm-paperclip-r3/thumbnail'
+require 'dm-paperclip-r3/storage'
+require 'dm-paperclip-r3/interpolations'
+require 'dm-paperclip-r3/attachment'
 
 # The base module that gets included in ActiveRecord::Base. See the
 # documentation for Paperclip::ClassMethods for more useful information.
@@ -227,7 +227,7 @@ module Paperclip
       # had a chance to configure the app in an initializer
       if Paperclip.config.use_dm_validations
         require 'dm-validations'
-        require 'dm-paperclip/validations'
+        require 'dm-paperclip-r3/validations'
         base.extend Paperclip::Validate::ClassMethods
       end
 
