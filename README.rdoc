@@ -1,4 +1,6 @@
-=DataMapper Paperclip
+=DataMapper Paperclip R3
+
+"DM-Paperclip R3" is based on Ken Robertson's wonderful DM-Paperclip and includes patches for compatability with rails > 3.0.0. 
 
 DM-Paperclip is a port of Thoughtbot's Paperclip plugin to work with DataMapper.  This plugin is fully compatible with
 the original ActiveRecord-oriented Paperclip.  You could take an existing ActiveRecord database and use it with DataMapper.
@@ -16,16 +18,16 @@ See the documentation for the +has_attached_file+ method for options.
 
 ==Code
 
-The code DM-Paperclip is available at Github:
+The code DM-Paperclip-R3 is available at Github:
 
-  git clone git://github.com/krobertson/dm-paperclip.git
+  git clone git://github.com/joelwreed/dm-paperclip.git
 
 It is regularly updated to keep in sync with the latest from Thoughtbot.
 
 Releases are tagged within the repository and versioned the same as the original model.  You can also get the latest release
 packaged as a gem through Rubyforge:
 
-  sudo gem install dm-paperclip
+  sudo gem install dm-paperclip-r3
 
 ==Usage
 

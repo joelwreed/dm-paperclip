@@ -6,15 +6,15 @@ require 'rake/gempackagetask'
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'lib')
 require 'dm-core'
 require 'dm-validations'
-require 'dm-paperclip'
+require 'dm-paperclip-r3'
 
 desc 'Default: run unit tests.'
 task :default => [:clean, :test]
 
 # Test tasks
-desc 'Test the DM-Paperclip library.'
+desc 'Test the DM-Paperclip-R3 library.'
 Rake::TestTask.new(:test) do |t|
-  t.libs << 'dm-paperclip'
+  t.libs << 'dm-paperclip-r3'
   t.pattern = 'test/**/*_test.rb'
   t.verbose = true
 end
@@ -29,7 +29,7 @@ end
 desc 'Generate documentation for the paperclip plugin.'
 Rake::RDocTask.new(:doc) do |rdoc|
   rdoc.rdoc_dir = 'doc'
-  rdoc.title    = 'DM-Paperclip'
+  rdoc.title    = 'DM-Paperclip-R3'
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
@@ -53,11 +53,11 @@ task :clean do |t|
 end
 
 spec = Gem::Specification.new do |s| 
-  s.name              = "dm-paperclip"
+  s.name              = "dm-paperclip-r3"
   s.version           = Paperclip::VERSION
-  s.author            = "Ken Robertson"
-  s.email             = "ken@invalidlogic.com"
-  s.homepage          = "http://invalidlogic.com/dm-paperclip/"
+  s.author            = "Joel Reed"
+  s.email             = "joelwreed@gmail.com"
+  s.homepage          = "https://github.com/joelwreed/dm-paperclip"
   s.platform          = Gem::Platform::RUBY
   s.summary           = "File attachments as attributes for DataMapper, based on the original Paperclip by Jon Yurek at Thoughtbot"
   s.files             = FileList["README.rdoc",
@@ -67,7 +67,6 @@ spec = Gem::Specification.new do |s|
                                  "{lib,tasks,test}/**/*"].to_a
   s.require_path      = "lib"
   s.test_files        = FileList["test/**/test_*.rb"].to_a
-  s.rubyforge_project = "dm-paperclip"
   s.has_rdoc          = true
   s.extra_rdoc_files  = ["README.rdoc"]
   s.rdoc_options << '--line-numbers' << '--inline-source'
