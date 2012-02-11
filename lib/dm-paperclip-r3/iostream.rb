@@ -6,7 +6,7 @@ module IOStream
   def to_tempfile(object)
     return object.to_tempfile if object.respond_to?(:to_tempfile)
     name = object.respond_to?(:original_filename) ? object.original_filename : (object.respond_to?(:path) ? object.path : "stream")
-    tempfile = Paperclip::Tempfile.new(["stream", File.extname(name)])
+    tempfile = Paperclip::Tempfile.new(File.basename(name))
     tempfile.binmode
     stream_to(object, tempfile)
   end
