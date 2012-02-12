@@ -44,7 +44,7 @@ require 'dm-paperclip-r3/attachment'
 # documentation for Paperclip::ClassMethods for more useful information.
 module Paperclip
 
-  VERSION = "2.4.2"
+  VERSION = "2.4.5"
 
   # To configure Paperclip, put this code in an initializer, Rake task, or wherever:
   #
