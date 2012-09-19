@@ -59,7 +59,7 @@ class IOStreamTest < Test::Unit::TestCase
       end
 
       should "convert it to a Paperclip Tempfile" do
-        assert @tempfile.is_a?(Paperclip::Tempfile)
+        assert @tempfile.is_a?(Tempfile)
       end
 
       should "have the name be based on the original_filename" do

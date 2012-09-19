@@ -11,7 +11,7 @@ class ThumbnailTest < Test::Unit::TestCase
 
   context "A Paperclip Tempfile" do
     setup do
-      @tempfile = Paperclip::Tempfile.new("file.jpg")
+      @tempfile = Tempfile.new(["file", ".jpg"])
     end
 
     should "have its path contain a real extension" do
@@ -25,7 +25,7 @@ class ThumbnailTest < Test::Unit::TestCase
 
   context "Another Paperclip Tempfile" do
     setup do
-      @tempfile = Paperclip::Tempfile.new("file")
+      @tempfile = Tempfile.new("file")
     end
 
     should "not have an extension if not given one" do
